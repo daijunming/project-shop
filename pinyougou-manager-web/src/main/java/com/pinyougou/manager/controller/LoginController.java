@@ -30,10 +30,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController
 {
     @RequestMapping("/name")
-    public Map name()
+    public Map<Object, Object> name()
     {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
-        Map map = new HashMap<>();
+        Map<Object, Object> map = new HashMap<>();
         map.put("loginName", name);
         return map;
         
